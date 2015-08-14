@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>两列布局-定宽+自适应</title>
+	<link rel="stylesheet" href="../css/2col-1fixed-1auto.css">
+	<style>
+		/* 页面样式 */
+
+		h1 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>两列布局:1列定宽200px，另外一列宽度自适应</h1>
+	<h4>布局方案1：float:left + margin-left</h4>
+	<div class="container1">
+		<div class="col-left">
+			左侧宽度固定<br>
+			先加载<br>
+			<br>
+			float: left;<br>
+			width: 200px;<br>
+		</div>
+		<div class="col-right">
+			右侧宽度自适应<br>
+			后加载<br>
+			<br>
+			margin-left: 210px;
+		</div>
+	</div>
+	<h4>布局方案2：全部浮动 + width100% + margin负值 + 双层div</h4>
+	<div class="container2">
+		<div class="sub-container">
+			<div class="col-right">
+				右侧宽度自适应<br>
+				先加载<br>
+				<br>
+				外层div：<br>
+				float: left;<br>
+				width: 100%;<br>
+				<br>
+				内层div：<br>
+				margin-left: 210px;
+			</div>
+		</div>
+		<div class="col-left">
+			左侧宽度固定<br>
+			后加载<br>
+			<br>
+			float: left;<br>
+			margin-left: -100%;<br>
+			width: 200px;
+		</div>
+	</div>
+</body>
+
+</html>
