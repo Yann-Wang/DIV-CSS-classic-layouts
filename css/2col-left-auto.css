@@ -1,0 +1,50 @@
+@charset "UTF-8";
+.cf:before,
+.cf:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* 颜色尺寸 */
+.col-left {
+  height: 200px;
+  background-color: palevioletred;
+}
+
+.col-right {
+  height: 200px;
+  background-color: #a8a4d9;
+}
+
+/* 布局方案1 */
+.container1 .col-left {
+  float: left;
+  width: 200px;
+}
+.container1 .col-right {
+  margin-left: 210px;
+}
+
+/* 布局方案2 */
+.container2 {
+  overflow: hidden;
+}
+.container2 .sub-container {
+  float: left;
+  width: 100%;
+}
+.container2 .sub-container .col-left {
+  margin-right: 210px;
+}
+.container2 .col-right {
+  float: right;
+  width: 200px;
+}
+
+/*# sourceMappingURL=2col-left-auto.css.map */
