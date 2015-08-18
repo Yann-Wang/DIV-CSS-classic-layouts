@@ -1,0 +1,38 @@
+/* 颜色尺寸 */
+
+.left-side, .right-side {
+	height: 200px;
+	background-color: palevioletred;
+}
+
+.middle-main {
+	height: 200px;
+	background-color: #a8a4d9;
+}
+/* 布局方案1 */
+.container1 {
+	.left-side, .right-side {
+		float: left;
+		width: 200px;
+		margin-right: 10px;
+	}
+	.middle-main {
+		margin-left: 420px;
+	}
+}
+/* 布局方案2 */
+.container2 {
+	.left-side, .right-side {
+		float: left;
+		width: 200px;
+		margin-right: 10px;
+	}
+	.wrap {
+		float: right;
+		width: 100%;
+		margin-left: -420px;
+		.middle-main {
+			margin-left: 420px;
+		}
+	}
+}

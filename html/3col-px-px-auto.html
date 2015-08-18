@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>px-px-auto</title>
+	<link rel="stylesheet" href="../css/3col-px-px-auto.css">
+	<style>
+		/* 页面样式 */
+
+		h1 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>px-px-auto</h1>
+	<h4>布局方案1：最简单，主内容不浮动，但是最后加载</h4>
+	<div class="container1">
+		<div class="left-side">
+			左边栏 <br>
+			float: left<br>
+			width: 200px<br>
+			margin-left: 10px<br>
+		</div>
+		<div class="right-side">
+		    右边栏 <br>
+			float: left<br>
+			width: 200px<br>
+			margin-left: 10px<br>
+		</div>
+		<div class="middle-main">
+			主内容 <br>
+			margin-left: 420px;
+		</div>
+	</div>
+	<h4>布局方案2：左左右浮动，主内容100%，内外层正负margin-left来调整页面顺序，主内容先加载</h4>
+	<div class="container2">
+		<div class="wrap">
+			<div class="middle-main">
+				外面div: <br>
+				float: right<br>
+				width: 100%<br>
+				margin-left: -420px<br><br>
+				里面div: <br>
+				margin-left: 420px<br>
+			</div>
+		</div>
+		<div class="left-side">
+			左边栏 <br>
+			float: left<br>
+			width: 200px<br>
+			margin-left: 10px<br>
+		</div>
+		<div class="right-side">
+		    右边栏 <br>
+			float: left<br>
+			width: 200px<br>
+			margin-left: 10px<br>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>左右边栏固定，中间自适应</title>
+	<link rel="stylesheet" href="../css/3col-px-auto-px.css">
+	<style>
+		/* 页面样式 */
+
+		h1 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<h1>左右边栏固定，中间自适应</h1>
+	<h4>布局方案1：淘宝双飞翼布局：全部左浮动，中间100%包裹两层，里面一层设置左右外边距，左右边栏用margin-left来移动位置</h4>
+	<div class="container1">
+		<div class="wrap">
+			<div class="middle-main">
+				外面div: <br>
+				float: left<br>
+				width: 100%<br><br>
+				里面div: <br>
+				margin-right: 210px<br>
+				margin-left: 210px<br>
+			</div>
+		</div>
+		<div class="left-side">
+			float: left<br>
+			width: 200px<br>
+			margin-left: -100%<br>
+		</div>
+		<div class="right-side">
+			float: left<br>
+			width: 200px<br>
+			margin-left: -200px<br>
+		</div>
+	</div>
+</body>
+
+</html>

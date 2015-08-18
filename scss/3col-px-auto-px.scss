@@ -1,0 +1,42 @@
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+/* 颜色尺寸 */
+
+.left-side, .right-side {
+	height: 200px;
+	background-color: palevioletred;
+}
+
+.middle-main {
+	height: 200px;
+	background-color: #a8a4d9;
+}
+/* 布局方案1 */
+.container1 {
+	overflow: hidden;
+	.wrap {
+		float: left;
+		width: 100%;
+		.middle-main {
+			margin-right: 210px;
+			margin-left: 210px;
+		}
+	}
+	.left-side {
+		float: left;
+		width: 200px;
+		margin-left: -100%;
+	}
+	.right-side {
+		float: left;
+		width: 200px;
+		margin-left: -200px;
+	}
+}
