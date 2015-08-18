@@ -9,39 +9,40 @@
 }
 /* 颜色尺寸 */
 
-.col-left {
+.col-main {
 	height: 200px;
 	background-color: palevioletred;
 }
 
-.col-right {
+.col-side {
 	height: 200px;
 	background-color: #a8a4d9;
 }
 /* 布局方案1 */
 .container1 {
-	.col-left {
-		float: left;
+	.col-side {
+		float: right;
 		width: 200px;
 	}
 
-	.col-right {
-		margin-left: 210px;
+	.col-main {
+		margin-right: 210px;
 	}
 }
 
 /* 布局方案2 */
 .container2 {
 	overflow: hidden;
-	.sub-container {
-		float: left;
+	.wrap {
+		float: right;
 		width: 100%;
-		.col-left {
+		.col-main {
 			margin-right: 210px;
 		}
 	}
-	.col-right {
+	.col-side {
 		float: right;
+		margin-right: -100%;
 		width: 200px;
 	}
 
